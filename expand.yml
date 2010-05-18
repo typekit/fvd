@@ -7,15 +7,15 @@ tests:
 
   - description: "n4"
     fvd: "n4"
-    fontface: "font-style:normal;font-weight:normal;"
+    fontface: "font-style:normal;font-weight:400;"
 
   - description: "i4"
     fvd: "i4"
-    fontface: "font-style:italic;font-weight:normal;"
+    fontface: "font-style:italic;font-weight:400;"
 
   - description: "o4"
     fvd: "o4"
-    fontface: "font-style:oblique;font-weight:normal;"
+    fontface: "font-style:oblique;font-weight:400;"
 
   # font-weight
 
