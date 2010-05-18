@@ -7,76 +7,76 @@ tests:
 
   - description: "n4"
     fvd: "n4"
-    font: "font-style:normal;font-weight:normal;"
+    fontface: "font-style:normal;font-weight:normal;"
 
   - description: "i4"
     fvd: "i4"
-    font: "font-style:italic;font-weight:normal;"
+    fontface: "font-style:italic;font-weight:normal;"
 
   - description: "o4"
     fvd: "o4"
-    font: "font-style:oblique;font-weight:normal;"
+    fontface: "font-style:oblique;font-weight:normal;"
 
   # font-weight
 
   - description: "n1"
     fvd: "n1"
-    font: "font-style:normal;font-weight:100;"
+    fontface: "font-style:normal;font-weight:100;"
 
   - description: "n2"
     fvd: "n2"
-    font: "font-style:normal;font-weight:200;"
+    fontface: "font-style:normal;font-weight:200;"
 
   - description: "n3"
     fvd: "n3"
-    font: "font-style:normal;font-weight:300;"
+    fontface: "font-style:normal;font-weight:300;"
 
   - description: "n4"
     fvd: "n4"
-    font: "font-style:normal;font-weight:400;"
+    fontface: "font-style:normal;font-weight:400;"
 
   - description: "n5"
     fvd: "n5"
-    font: "font-style:normal;font-weight:500;"
+    fontface: "font-style:normal;font-weight:500;"
 
   - description: "n6"
     fvd: "n6"
-    font: "font-style:normal;font-weight:600;"
+    fontface: "font-style:normal;font-weight:600;"
 
   - description: "n7"
     fvd: "n7"
-    font: "font-style:normal;font-weight:700;"
+    fontface: "font-style:normal;font-weight:700;"
 
   - description: "n8"
     fvd: "n8"
-    font: "font-style:normal;font-weight:800;"
+    fontface: "font-style:normal;font-weight:800;"
 
   - description: "n9"
     fvd: "n9"
-    font: "font-style:normal;font-weight:900;"
+    fontface: "font-style:normal;font-weight:900;"
 
   # invalid description
 
   - description: "'' is null because it's empty"
     fvd: ""
-    font: ~
+    fontface: ~
 
   - description: "'x0' is null because the style is invalid"
     fvd: "x0"
-    font: ~
+    fontface: ~
 
   - description: "'n0' is null because the weight is invalid"
     fvd: "n0"
-    font: ~
+    fontface: ~
 
   - description: "'n' is null because there is only one input"
     fvd: "n"
-    font: ~
+    fontface: ~
 
   - description: "'1' is null because there is only one input"
     fvd: "1"
-    font: ~
+    fontface: ~
 
   - description: "'n1x' is null because there are more than two inputs"
     fvd: "n1x"
-    font: ~
+    fontface: ~

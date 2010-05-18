@@ -9,96 +9,96 @@ tests:
   # font-style
     
   - description: font-style: normal becomes n
-    font: |
+    fontface: |
       font-style: normal;
     fvd: n4
     
   - description: font-style: italic becomes i
-    font: |
+    fontface: |
       font-style: italic;
     fvd: i4
     
   - description: font-style: oblique becomes o
-    font: |
+    fontface: |
       font-style: oblique;
     fvd: o4
     
   - description: unknown font-style becomes n
-    font: |
+    fontface: |
       font-style: other;
     fvd: n4
     
   # font-weight
     
   - description: font-weight: normal becomes 4
-    font: |
+    fontface: |
       font-weight: normal;
     fvd: n4
     
   - description: font-weight: bold becomes 7
-    font: |
+    fontface: |
       font-weight: bold;
     fvd: n7
     
   - description: font-weight: 100 becomes 1
-    font: |
+    fontface: |
       font-weight: 100;
     fvd: n1
     
   - description: font-weight: 200 becomes 2
-    font: |
+    fontface: |
       font-weight: 200;
     fvd: n2
     
   - description: font-weight: 300 becomes 3
-    font: |
+    fontface: |
       font-weight: 300;
     fvd: n3
     
   - description: font-weight: 400 becomes 4
-    font: |
+    fontface: |
       font-weight: 400;
     fvd: n4
     
   - description: font-weight: 500 becomes 5
-    font: |
+    fontface: |
       font-weight: 500;
     fvd: n5
     
   - description: font-weight: 600 becomes 6
-    font: |
+    fontface: |
       font-weight: 600;
     fvd: n6
     
   - description: font-weight: 700 becomes 7
-    font: |
+    fontface: |
       font-weight: 700;
     fvd: n7
     
   - description: font-weight: 800 becomes 8
-    font: |
+    fontface: |
       font-weight: 800;
     fvd: n8
     
   - description: font-weight: 900 becomes 9
-    font: |
+    fontface: |
       font-weight: 900;
     fvd: n9
     
   - description: font-weight: 1000 becomes 4
-    font: |
+    fontface: |
       font-weight: 1000;
     fvd: n4
     
   - description: font-weight: 150 becomes 4
-    font: |
+    fontface: |
       font-weight: 150;
     fvd: n4
     
   # combinations
     
   - description: When all properties are defined
-    font: |
+    fontface: |
       font-style: italic;
       font-weight: bold;
     fvd: i7
@@ -106,7 +106,7 @@ tests:
   # string parsing
     
   - description: When the font-face description has extraneous spaces
-    font: |
+    fontface: |
     
       font-style:   italic  ;
       
@@ -115,12 +115,12 @@ tests:
     fvd: i4
     
   - description: When the font-face description lacks whitespace
-    font: |
+    fontface: |
       font-style:italic;font-weight:bold;
     fvd: i6
     
   - description: When the font-face description contains unhandled properties
-    font: |
+    fontface: |
       src: url(/font.otf)
       font-style:italic;
       font-stretch:condensed
