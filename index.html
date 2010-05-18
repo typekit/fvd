@@ -1,77 +1,146 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>typekit/fontvariationdescription @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #ffffff;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
+  <title>Font Variation Description</title>
+  <style type="text/css">
+    body {
+      width: 500px;
       margin: 0 auto;
-      width: 700px;
     }
-		h1 { font-size: 3.8em; color: #333; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #333; }
-    h3 { text-align: center; color: #333; }
-    a { color: #999; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
+    h1, h2 {
+      line-height: 1;
+    }
+    body {
+      line-height: 1.6;
+    }
+    pre {
+      margin: 0 0 1em 0;
+      padding: .5em;
+      background-color: #eee;
+      border: 1px solid #ddd;
+    }
+    li {
+      margin-bottom: 1em;
+    }
+  </style>
 </head>
-
 <body>
-  <a href="http://github.com/typekit/fontvariationdescription"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <h1>Font Variation Description is a compact and unambiguous way to describe a font in CSS</h1>
 
-  <div id="container">
+  <p>
+    Stop using so many words. Instead of this
+  </p>
 
-    <h1><a href="http://github.com/typekit/fontvariationdescription">fontvariationdescription</a>
-      <span class="small">by <a href="http://github.com/typekit">typekit</a></span></h1>
+  <pre>font style "normal", font weight "normal"</pre>
 
-    <div class="description">
-      A compact and unambiguous way to describe a font in CSS.
-    </div>
+  <p>
+    Say this
+  </p>
 
-<h2>License</h2>
-<p>Apache 2.0</p>
-<h2>Authors</h2>
-<p>Ryan Carver (ryan@typekit.com)
-<br/>
-<br/>      </p>
-<h2>Contact</h2>
-<p>support@typekit.com</p>
+  <pre>n4</pre>
+
+  <p>
+    It's simple: just use the first letter of the <code>font-style</code>,
+    and the first number of the <em>numeric</em> <code>font-weight</code>.
+  </p>
+
+  <p>
+    Here are all of the possible values.
+  </p>
+
+<pre>
+font-style:  n, i, o
+font-weight: 1, 2, 3, 4, 5, 6, 7, 8, 9</pre>
+
+  <p>
+    With just these simple rules we can do some powerful things.
+  </p>
+
+  <h2>Compress</h2>
+  
+  <p>
+    Succinctly describe a font by its style and weight properties.
+  </p>
+
+<pre>
+font-style: normal; font-weight: normal;
+=> n4</pre>
+
+<pre>
+font-style: italic; font-weight: bold;
+=> i7</pre>
+
+<pre>
+font-style: italic; font-weight: 700;
+=> i7</pre>
+
+<pre>
+font-style: normal; font-weight: 100;
+=> n1</pre>
+
+  <p>
+    Remember, always say the style, followed by the weight.
+  </p>
+
+<pre>
+font-weight: 100; font-style: normal;
+=> n1</pre>
+
+  <h2>Expand</h2>
+  
+  <p>
+    Turn a Font Variation Description back into CSS.
+  </p>
+
+<pre>
+n1
+=> font-style: normal; font-weight: 100;</pre>
+
+<pre>
+i7
+=> font-style: italic; font-weight: 700;</pre>
+
+  <h2>Numeric font weights?</h2>
+  
+  <p>
+    Font Variation Description uses numeric font weights to maintain consistency
+    when using weights other than "normal" and "bold". As defined by the 
+    <a href="http://www.w3.org/TR/css3-fonts/#font-weight0">CSS3 spec</a>, 
+  </p>
+  
+  <pre>
+font-weight: normal = 400 = 4
+font-weight: bold = 700 = 7</pre>
+
+  <h2>Why?</h2>
+  
+  <p>
+    Simply agreeing on this convention opens new doors for standards in web fonts.
+    Here are a few examples to get you thinking..
+  </p>
+  
+  <ul>
+    <li>
+      <strong>CSS class names</strong> Generate a unique CSS class name for
+      each font in a family. <a href="http://github.com/typekit/webfontloader">WebFont Loader</a>
+      uses this technique to generate CSS class names as events for each font load. 
+    </li>
+    <li>
+      <strong>APIs</strong> Easily describe a family of fonts. For example, <code>"Droid Serif:n4,i4,n7,i7"</code>
+      clearly describes the family <em>Droid Serif</em> in the four standard weights and styles:
+      Normal, Italic, Bold, Bold Italic. We can use this for both <em>input</em> and <em>output</em>.
+    </li>
+  </ul>
 
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/typekit/fontvariationdescription/zipball/master">zip</a> or
-      <a href="http://github.com/typekit/fontvariationdescription/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/typekit/fontvariationdescription</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/typekit/fontvariationdescription">typekit/fontvariationdescription</a>
-    </div>
-
-  </div>
-
+  <h2>Learn More</h2>
+  
+  <p>
+    See the full specification, test suite and reference implementations at
+    Typekit's <a href="https://github.com/typekit/fontvariationdescription">Font Variation Description</a>
+    project.
+  </p>
   
 </body>
 </html>
