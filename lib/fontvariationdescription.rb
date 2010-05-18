@@ -32,8 +32,8 @@ module FontVariationDescription
   }
 
   def self.compact(input)
-    @compacter ||= Compacter.new
-    @compacter.parse(input)
+    @compactor ||= Compactor.new
+    @compactor.parse(input)
   end
 
   def self.expand(input)
