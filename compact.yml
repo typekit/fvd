@@ -3,127 +3,126 @@
 
 tests:
   - description: An empty font-face description
-    fontface: 
-    fvd: n4
-    
+    fontface: ""
+    fvd: "n4"
+
   # font-style
-    
-  - description: font-style: normal becomes n
+
+  - description: "font-style: normal becomes n"
     fontface: |
       font-style: normal;
-    fvd: n4
-    
-  - description: font-style: italic becomes i
+    fvd: "n4"
+
+  - description: "font-style: italic becomes i"
     fontface: |
       font-style: italic;
-    fvd: i4
-    
-  - description: font-style: oblique becomes o
+    fvd: "i4"
+
+  - description: "font-style: oblique becomes o"
     fontface: |
       font-style: oblique;
-    fvd: o4
-    
-  - description: unknown font-style becomes n
+    fvd: "o4"
+
+  - description: "unknown font-style becomes n"
     fontface: |
       font-style: other;
-    fvd: n4
-    
+    fvd: "n4"
+
   # font-weight
-    
-  - description: font-weight: normal becomes 4
+
+  - description: "font-weight: normal becomes 4"
     fontface: |
       font-weight: normal;
-    fvd: n4
-    
-  - description: font-weight: bold becomes 7
+    fvd: "n4"
+
+  - description: "font-weight: bold becomes 7"
     fontface: |
       font-weight: bold;
-    fvd: n7
-    
-  - description: font-weight: 100 becomes 1
+    fvd: "n7"
+
+  - description: "font-weight: 100 becomes 1"
     fontface: |
       font-weight: 100;
-    fvd: n1
-    
-  - description: font-weight: 200 becomes 2
+    fvd: "n1"
+
+  - description: "font-weight: 200 becomes 2"
     fontface: |
       font-weight: 200;
-    fvd: n2
-    
-  - description: font-weight: 300 becomes 3
+    fvd: "n2"
+
+  - description: "font-weight: 300 becomes 3"
     fontface: |
       font-weight: 300;
-    fvd: n3
-    
-  - description: font-weight: 400 becomes 4
+    fvd: "n3"
+
+  - description: "font-weight: 400 becomes 4"
     fontface: |
       font-weight: 400;
-    fvd: n4
-    
-  - description: font-weight: 500 becomes 5
+    fvd: "n4"
+
+  - description: "font-weight: 500 becomes 5"
     fontface: |
       font-weight: 500;
-    fvd: n5
-    
-  - description: font-weight: 600 becomes 6
+    fvd: "n5"
+
+  - description: "font-weight: 600 becomes 6"
     fontface: |
       font-weight: 600;
-    fvd: n6
-    
-  - description: font-weight: 700 becomes 7
+    fvd: "n6"
+
+  - description: "font-weight: 700 becomes 7"
     fontface: |
       font-weight: 700;
-    fvd: n7
-    
-  - description: font-weight: 800 becomes 8
+    fvd: "n7"
+
+  - description: "font-weight: 800 becomes 8"
     fontface: |
       font-weight: 800;
-    fvd: n8
-    
-  - description: font-weight: 900 becomes 9
+    fvd: "n8"
+
+  - description: "font-weight: 900 becomes 9"
     fontface: |
       font-weight: 900;
-    fvd: n9
-    
-  - description: font-weight: 1000 becomes 4
+    fvd: "n9"
+
+  - description: "font-weight: 1000 becomes 4"
     fontface: |
       font-weight: 1000;
-    fvd: n4
-    
-  - description: font-weight: 150 becomes 4
+    fvd: "n4"
+
+  - description: "font-weight: 150 becomes 4"
     fontface: |
       font-weight: 150;
-    fvd: n4
-    
+    fvd: "n4"
+
   # combinations
-    
-  - description: When all properties are defined
+
+  - description: "When all properties are defined"
     fontface: |
       font-style: italic;
       font-weight: bold;
-    fvd: i7
-    
+    fvd: "i7"
+
   # string parsing
-    
-  - description: When the font-face description has extraneous spaces
+
+  - description: "When the font-face description has extraneous spaces"
     fontface: |
-    
+
       font-style:   italic  ;
-      
+
         font-weight : bold;
-      
-    fvd: i4
-    
+
+    fvd: "i7"
+
   - description: When the font-face description lacks whitespace
     fontface: |
       font-style:italic;font-weight:bold;
-    fvd: i6
-    
+    fvd: "i7"
+
   - description: When the font-face description contains unhandled properties
     fontface: |
-      src: url(/font.otf)
+      src: url(/font.otf);
       font-style:italic;
-      font-stretch:condensed
+      font-stretch:condensed;
       font-weight:bold;
-    fvd: i6
-    
+    fvd: "i7"
