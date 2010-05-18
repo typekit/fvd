@@ -1,6 +1,5 @@
 module FontVariationDescription
   class Compactor
-    include Item::Helper
 
     def initialize(properties=PROPERTIES, values=VALUES)
       @properties = properties
@@ -22,6 +21,15 @@ module FontVariationDescription
       }
 
       result.join('')
+    end
+
+  protected
+
+    def get_item(property)
+      if index = @properties.index(property)
+        values = @values[property]
+        Item.new(index, property, values)
+      end
     end
 
   end
