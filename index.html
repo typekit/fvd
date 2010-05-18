@@ -3,22 +3,46 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Font Variation Description</title>
+  <script type="text/javascript" src="http://use.typekit.com/sdy0juk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
   <style type="text/css">
     body {
       width: 500px;
       margin: 0 auto;
+      font-family: "facitweb-1","facitweb-2",sans-serif;
+      line-height: 1.6;
+      color: #444;
     }
     h1, h2 {
-      line-height: 1;
+      line-height: 1.2;
+      font-weight: bold;
+      color: #000;
     }
-    body {
-      line-height: 1.6;
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      margin-top: 1.5em;
+      font-size: 1.5em;
+    }
+    code {
+      font-family: "inconsolata-1","inconsolata-2",monospace;
+      font-size: 1.3em;
+      color: #444;
+      background-color: #f5f5f5;
+      padding: 0 2px;
     }
     pre {
+      font-family: "inconsolata-1","inconsolata-2",monospace;
+      font-size: 1.2em;
       margin: 0 0 1em 0;
-      padding: .5em;
-      background-color: #eee;
-      border: 1px solid #ddd;
+      padding: .3em .5em;
+      background-color: #f5f5f5;
+      border: 1px solid #dadada;
+      color: #000;
+    }
+    hr {
+      border: 1px solid #eee;
     }
     li {
       margin-bottom: 1em;
@@ -27,34 +51,46 @@
 </head>
 <body>
   <h1>Font Variation Description is a compact and unambiguous way to describe a font in CSS</h1>
+  
+  <p>
+    Talking about fonts is hard. Do you mean <em>font</em> or <em>family</em>
+    or <em>normal</em> or <em>regular</em> or <em>bold</em> or <em>700</em>?
+    Font Variation Description is here to help.
+  </p>
+  
+  <hr>
 
   <p>
-    Stop using so many words. Instead of this
+    First, stop using so many words. Instead of this
   </p>
 
-  <pre>font style "normal", font weight "normal"</pre>
+  <pre>font style normal, font weight normal</pre>
 
   <p>
     Say this
   </p>
 
   <pre>n4</pre>
+  
+  <h2>The rules</h2>
 
   <p>
-    It's simple: just use the first letter of the <code>font-style</code>,
-    and the first number of the <em>numeric</em> <code>font-weight</code>.
+    It's simple: use the first letter of the <code>font-style</code>,
+    followed by the first number of the <em>numeric</em> <code>font-weight</code>.
   </p>
+  
+  <pre>[font-style][font-weight]</pre>
 
   <p>
     Here are all of the possible values.
   </p>
 
 <pre>
-font-style:  n, i, o
-font-weight: 1, 2, 3, 4, 5, 6, 7, 8, 9</pre>
+font-style   n, i, o
+font-weight  1, 2, 3, 4, 5, 6, 7, 8, 9</pre>
 
   <p>
-    With just these simple rules we can do some powerful things.
+    With these simple rules we can do some powerful things.
   </p>
 
   <h2>Compress</h2>
@@ -101,22 +137,31 @@ n1
 i7
 => font-style: italic; font-weight: 700;</pre>
 
-  <h2>Numeric font weights?</h2>
+  <h2>But what about...?</h2>
   
   <p>
     Font Variation Description uses numeric font weights to maintain consistency
-    when using weights other than "normal" and "bold". As defined by the 
-    <a href="http://www.w3.org/TR/css3-fonts/#font-weight0">CSS3 spec</a>, 
+    when expand beyond the standard "normal" and "bold". The 
+    <a href="http://www.w3.org/TR/css3-fonts/#font-weight0">CSS3 spec</a> 
+    gives us numeric equivalents for these common terms.
   </p>
   
   <pre>
 font-weight: normal = 400 = 4
 font-weight: bold = 700 = 7</pre>
 
+  <p>
+    You may also wonder, "why not just use 'b' and 'i'?" Two reasons:
+    consistency, and the future. When browsers support larger font families
+    made up of condensed, expanded, and small caps, Font Variation Description
+    will grow with them. The more attributes we get, the more ambiguous a
+    simple "b" becomes.
+  </p>
+
   <h2>Why?</h2>
   
   <p>
-    Simply agreeing on this convention opens new doors for standards in web fonts.
+    Simply agreeing on a convention opens new doors for standards in web fonts.
     Here are a few examples to get you thinking..
   </p>
   
