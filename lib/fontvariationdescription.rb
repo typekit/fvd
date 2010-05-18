@@ -31,11 +31,33 @@ module FontVariationDescription
     ]
   }
 
+  # Public: Transform CSS @font-face descriptors into a Font Variation
+  # Description.
+  #
+  # input - A String containing @font-face descriptors.
+  #
+  # Examples
+  #
+  #   FontVariationDescription.compact("font-style:italic;font-weight:bold")
+  #   # => "i7"
+  #
+  # Returns the Font Variation Description String.
   def self.compact(input)
     @compactor ||= Compactor.new
     @compactor.parse(input)
   end
 
+  # Public: Transform a Font Variation Description into CSS @font-face
+  # descriptors.
+  #
+  # input - A Font Variation Description String.
+  #
+  # Examples
+  #
+  #   FontVariationDescription.expand("i7")
+  #   # => "font-style:italic;font-weight:bold"
+  #
+  # Returns the CSS @font-face descriptor String.
   def self.expand(input)
     @expander ||= Expander.new
     @expander.parse(input)
