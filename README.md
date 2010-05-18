@@ -30,12 +30,12 @@ Possible additions:
 ## Values
 
 The possible values for each property are well defined, and a value is
-required for each property. Values must be a single character. The Font Values
-Description value and its equivalent CSS value for each property are as
-follows.
+required for each property. Values must be a single character. The Font
+Variation Description value and its equivalent CSS value for each property are
+as follows.
 
 Each property must have a default value, but may have aliases for use when
-generating a Font Values Description. To maintain unambiguous output, there
+generating a Font Variation Description. To maintain unambiguous output, there
 must be no alias return values.
 
 ### [font-style](http://www.w3.org/TR/css3-fonts/#font-style0)
