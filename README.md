@@ -2,14 +2,15 @@
 
 A way to unambiguously, compactly and clearly describe a set of
 [@font-face](http://www.w3.org/TR/css3-fonts/) properties. This is implemented
-as a simple string. For example
+as a simple string. For example.
 
     n4
 
-This specification is currently focused on describing an existing @font-face
-descriptor, rather than describing an intended descriptor. The latter becomes
-more complicated when considering unspecified properties and the existence or
-non-existence of a particular font face.
+With these two characters we can generate choose a font, or generate style and
+weight information for an `@font-face` rule.
+
+    font-style: normal;
+    font-weight: normal;
 
 
 ## Properties
@@ -75,8 +76,9 @@ must be no alias return values.
 
 ## Parsing Rules
 
-See [compaction test suite](compact.yml) and the 
-[expansion test suite](expand.yml) for a complete set of rules.
+See [compaction test suite](http://github.com/typekit/fontvariationdescription/blob/master/compact.yml)
+and the [expansion test suite](http://github.com/typekit/fontvariationdescription/blob/master/expand.yml)
+for a complete set of rules.
 
 
 ## Examples:
