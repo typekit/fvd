@@ -1,3 +1,4 @@
+require File.dirname(__FILE__) + '/fontvariationdescription/item'
 require File.dirname(__FILE__) + '/fontvariationdescription/compactor'
 require File.dirname(__FILE__) + '/fontvariationdescription/expander'
 
