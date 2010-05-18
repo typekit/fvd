@@ -1,5 +1,7 @@
 require 'test/unit'
-require 'yaml'
 
-require File.dirname(__FILE__) + '/../lib/fontvariationdescription'
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+
+require 'fontvariationdescription'
+require 'fontvariationdescription/test'
 

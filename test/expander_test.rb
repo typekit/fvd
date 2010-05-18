@@ -6,17 +6,10 @@ class ExpanderTest < Test::Unit::TestCase
     @expander = FontVariationDescription::Expander.new
   end
 
-  Data = YAML.load_file(File.dirname(__FILE__) + "/../expand.yml")
-
-  Data['tests'].each_with_index do |test, index|
-    description = test['description']
-    fvd = test['fvd']
-    fontface = test['fontface']
-
+  # See expand.yml for test cases.
+  FontVariationDescription::Test.expand_tests.each_with_index do |(fontface, fvd, description), index|
     define_method "test_#{index}_#{description.gsub(/\W/, '')}" do
-      expected = fontface
-      actual = @expander.parse(fvd)
-      assert_equal actual, expected, description
+      assert_equal @expander.parse(fvd), fontface, description
     end
   end
 

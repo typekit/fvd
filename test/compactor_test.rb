@@ -6,17 +6,10 @@ class CompatorTest < Test::Unit::TestCase
     @compactor = FontVariationDescription::Compactor.new
   end
 
-  Data = YAML.load_file(File.dirname(__FILE__) + "/../compact.yml")
-
-  Data['tests'].each_with_index do |test, index|
-    description = test['description']
-    fvd = test['fvd']
-    fontface = test['fontface']
-
+  # See compact.yml for test cases.
+  FontVariationDescription::Test.compact_tests.each_with_index do |(fontface, fvd, description), index|
     define_method "test_#{index}_#{description.gsub(/\W/, '')}" do
-      expected = fvd
-      actual = @compactor.parse(fontface)
-      assert_equal expected, actual, description
+      assert_equal fvd, @compactor.parse(fontface), description
     end
   end
 
