@@ -1,0 +1,48 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+  font-family: "facitweb-1","facitweb-2",sans-serif;
+  line-height: 1.6;
+  color: #444;
+}
+
+h1, h2 {
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+
+code {
+  font-family: "inconsolata-1","inconsolata-2",monospace;
+  font-size: 1.3em;
+  color: #444;
+  background-color: #f5f5f5;
+  padding: 0 2px;
+}
+
+pre {
+  font-family: "inconsolata-1","inconsolata-2",monospace;
+  font-size: 1.2em;
+  margin: 0 0 1em 0;
+  padding: .3em .5em;
+  background-color: #f5f5f5;
+  border: 1px solid #dadada;
+  color: #000;
+}
+
+hr {
+  border: 1px solid #eee;
+}
+
+li {
+  margin-bottom: 1em;
+}
