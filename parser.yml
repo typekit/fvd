@@ -1,5 +1,5 @@
 # This file describes a set of test cases for parsing a Font Variation
-# Description into a set of @font-face descriptors.
+# Description into a Ruby hash.
 
 tests:
 
@@ -7,53 +7,77 @@ tests:
 
   - description: "n4"
     fvd: "n4"
-    output: ["normal", "400"]
+    output:
+      font-style: normal
+      font-weight: "400"
 
   - description: "i4"
     fvd: "i4"
-    output: ["italic", "400"]
+    output:
+      font-style: italic
+      font-weight: "400"
 
   - description: "o4"
     fvd: "o4"
-    output: ["oblique", "400"]
+    output:
+      font-style: oblique
+      font-weight: "400"
 
   # font-weight
 
   - description: "n1"
     fvd: "n1"
-    output: ["normal", "100"]
+    output:
+      font-style: normal
+      font-weight: "100"
 
   - description: "n2"
     fvd: "n2"
-    output: ["normal", "200"]
+    output:
+      font-style: normal
+      font-weight: "200"
 
   - description: "n3"
     fvd: "n3"
-    output: ["normal", "300"]
+    output:
+      font-style: normal
+      font-weight: "300"
 
   - description: "n4"
     fvd: "n4"
-    output: ["normal", "400"]
+    output:
+      font-style: normal
+      font-weight: "400"
 
   - description: "n5"
     fvd: "n5"
-    output: ["normal", "500"]
+    output:
+      font-style: normal
+      font-weight: "500"
 
   - description: "n6"
     fvd: "n6"
-    output: ["normal", "600"]
+    output:
+      font-style: normal
+      font-weight: "600"
 
   - description: "n7"
     fvd: "n7"
-    output: ["normal", "700"]
+    output:
+      font-style: normal
+      font-weight: "700"
 
   - description: "n8"
     fvd: "n8"
-    output: ["normal", "800"]
+    output:
+      font-style: normal
+      font-weight: "800"
 
   - description: "n9"
     fvd: "n9"
-    output: ["normal", "900"]
+    output:
+      font-style: normal
+      font-weight: "900"
 
   # invalid description
 
@@ -80,3 +104,4 @@ tests:
   - description: "'n1x' is null because there are more than two inputs"
     fvd: "n1x"
     output: ~
+

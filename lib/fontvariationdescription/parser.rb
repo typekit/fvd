@@ -18,7 +18,7 @@ module FontVariationDescription
         item.expand(result, key, false)
       }
 
-      result if result.all?
+      Hash[result] if result.all?
     end
 
   end

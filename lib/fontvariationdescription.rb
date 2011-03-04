@@ -72,10 +72,9 @@ module FontVariationDescription
   # Examples
   #
   #   FontVariationDescription.parse("i7")
-  #   # => ["italic", "700"]
+  #   # => { "font-style" => "italic", "font-weight" => "700"}
   #
-  # Returns the a List of Strings in the order defined by the Font
-  #   Variation Description String.
+  # Returns the a Hash of CSS properties and their values.
   def self.parse(input)
     @parser ||= Parser.new
     @parser.parse(input)

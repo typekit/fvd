@@ -11,7 +11,7 @@ class FontVariationDescriptionTest < Test::Unit::TestCase
   end
 
   def test_parse
-    assert_equal ['italic', '700'], FontVariationDescription.parse('i7')
+    assert_equal({ "font-style" => 'italic', "font-weight" => '700' }, FontVariationDescription.parse('i7'))
   end
 
 end
