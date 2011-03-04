@@ -1,7 +1,7 @@
-require File.dirname(__FILE__) + '/fontvariationdescription/item'
-require File.dirname(__FILE__) + '/fontvariationdescription/compactor'
-require File.dirname(__FILE__) + '/fontvariationdescription/expander'
-require File.dirname(__FILE__) + '/fontvariationdescription/parser'
+require 'fontvariationdescription/item'
+require 'fontvariationdescription/compactor'
+require 'fontvariationdescription/expander'
+require 'fontvariationdescription/parser'
 
 module FontVariationDescription
   VERSION = '0.9.0'
