@@ -1,5 +1,5 @@
 # This file describes a set of test cases for parsing a Font Variation
-# Description into a Ruby hash.
+# Description into a hash.
 
 tests:
 
