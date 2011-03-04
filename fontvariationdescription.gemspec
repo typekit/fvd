@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'fontvariationdescription'
-  s.version           = '0.9.0'
-  s.date              = '2010-05-17'
+  s.version           = '0.10.0'
+  s.date              = '2011-03-04'
   s.rubyforge_project = 'fontvariationdescription'
 
   ## Make sure your summary is short. The description may be as long
@@ -46,14 +46,23 @@ END
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
+    LICENSE
     README.md
+    Rakefile
     compact.yml
     expand.yml
+    fontvariationdescription.gemspec
     lib/fontvariationdescription.rb
     lib/fontvariationdescription/compactor.rb
     lib/fontvariationdescription/expander.rb
+    lib/fontvariationdescription/item.rb
+    lib/fontvariationdescription/parser.rb
+    lib/fontvariationdescription/test.rb
+    parser.yml
     test/compactor_test.rb
     test/expander_test.rb
+    test/font_variation_description_test.rb
+    test/parser_test.rb
     test/test_helper.rb
   ]
   # = MANIFEST =

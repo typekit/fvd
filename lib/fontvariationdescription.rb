@@ -4,7 +4,7 @@ require 'fontvariationdescription/expander'
 require 'fontvariationdescription/parser'
 
 module FontVariationDescription
-  VERSION = '0.9.0'
+  VERSION = '0.10.0'
 
   PROPERTIES = [
     'font-style',
