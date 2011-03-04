@@ -74,7 +74,8 @@ module FontVariationDescription
   #   FontVariationDescription.parse("i7")
   #   # => ["italic", "700"]
   #
-  # Returns the CSS @font-face descriptor String.
+  # Returns the a List of Strings in the order defined by the Font
+  #   Variation Description String.
   def self.parse(input)
     @parser ||= Parser.new
     @parser.parse(input)
