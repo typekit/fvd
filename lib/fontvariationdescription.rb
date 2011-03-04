@@ -56,7 +56,7 @@ module FontVariationDescription
   # Examples
   #
   #   FontVariationDescription.expand("i7")
-  #   # => "font-style:italic;font-weight:bold"
+  #   # => "font-style:italic;font-weight:700"
   #
   # Returns the CSS @font-face descriptor String.
   def self.expand(input)
