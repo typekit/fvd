@@ -18,5 +18,12 @@ module FontVariationDescription
       }
     end
 
+    def parser_test
+      data = YAML.load_file(File.dirname(__FILE__) + "/../../parser.yml")
+      data['tests'].map { |test|
+        [test['output'], test['fvd'], test['description']]
+      }
+    end
+
   end
 end

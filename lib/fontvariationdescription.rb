@@ -1,6 +1,7 @@
 require File.dirname(__FILE__) + '/fontvariationdescription/item'
 require File.dirname(__FILE__) + '/fontvariationdescription/compactor'
 require File.dirname(__FILE__) + '/fontvariationdescription/expander'
+require File.dirname(__FILE__) + '/fontvariationdescription/parser'
 
 module FontVariationDescription
   VERSION = '0.9.0'
@@ -63,4 +64,19 @@ module FontVariationDescription
     @expander.parse(input)
   end
 
+  # Public: Transform a Font Variation Description into a List of its
+  # parts.
+  #
+  # input - A Font Variation Description String.
+  #
+  # Examples
+  #
+  #   FontVariationDescription.parse("i7")
+  #   # => ["italic", "700"]
+  #
+  # Returns the CSS @font-face descriptor String.
+  def self.parse(input)
+    @parser ||= Parser.new
+    @parser.parse(input)
+  end
 end
