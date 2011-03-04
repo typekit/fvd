@@ -76,8 +76,9 @@ must be no alias return values.
 
 ## Parsing Rules
 
-See [compaction test suite](http://github.com/typekit/fontvariationdescription/blob/master/compact.yml)
-and the [expansion test suite](http://github.com/typekit/fontvariationdescription/blob/master/expand.yml)
+See [compaction test suite](http://github.com/typekit/fvd/blob/master/compact.yml),
+[expansion test suite](http://github.com/typekit/fvd/blob/master/expand.yml)
+and [parser test suite](http://github.com/typekit/fvd/blob/master/parser.yml)
 for a complete set of rules.
 
 
