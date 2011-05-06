@@ -2,9 +2,9 @@ require 'fontvariationdescription/item'
 require 'fontvariationdescription/compactor'
 require 'fontvariationdescription/expander'
 require 'fontvariationdescription/parser'
+require 'fontvariationdescription/version'
 
 module FontVariationDescription
-  VERSION = '0.10.0'
 
   PROPERTIES = [
     'font-style',
