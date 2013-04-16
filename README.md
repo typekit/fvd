@@ -6,7 +6,7 @@ as a simple string. For example.
 
     n4
 
-With these two characters we can generate choose a font, or generate style and
+With these two characters we can choose a font, or generate style and
 weight information for an `@font-face` rule.
 
     font-style: normal;
