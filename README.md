@@ -56,7 +56,7 @@ must be no alias return values.
     8: 800
     9: 900
 
-### [font-stretch](http://www.w3.org/TR/css3-fonts/#font-stretch0)
+### [font-stretch](http://www.w3.org/TR/css3-fonts/#font-stretch-prop)
 
     a: ultra-condensed
     b: extra-condensed
@@ -68,7 +68,7 @@ must be no alias return values.
     g: extra-expanded
     h: ultra-expanded
 
-### font-variant (not currently in the CSS3 font spec)
+### [font-variant](http://www.w3.org/TR/css3-fonts/#propdef-font-variant)
 
     n: normal
     c: small-caps
